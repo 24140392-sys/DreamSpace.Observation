@@ -1,275 +1,325 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreamSpace</title>
+  <style>
+    :root {
+      --azul-marino: #0b1a33;
+      --crema: #f9f5e7;
+      --dorado: #d4af37;
+      --blanco: #ffffff;
+      --gris: #f3f3f3;
+    }
 
-<style>
     body {
-font-family: 'Poppins', sans-serif;
-background-color: var(--background);
-color: rgb(16, 55, 114);
-line-height: 1.6;
-}
-
-
-
-
-header {
-background: var(--primary);
-color: rgb(21, 21, 66);
-padding: 20px 30px;
-position: sticky;
-top: 0;
-z-index: 10;
-box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-
-
-
-.nav {
-max-width: 1200px;
-margin: 0 auto;
-display: flex;
-align-items: center;
-justify-content: space-between;
-}
-
-
-
-
-.logo {
-font-size: 1.8rem;
-font-weight: 700;
-letter-spacing: 1px;
-}
-
-
-
-
-nav ul {
-list-style: none;
-display: flex;
-gap: 20px;
-}
-
-
-
-
-nav a {
-color: rgb(199, 157, 105);
-text-decoration: none;
-font-weight: 500;
-transition: color 0.3s ease;
-}
-
-
-
-
-nav a:hover {
-color: rgb(153, 113, 52);
-}
-hero-container {
-padding: 60px 20px;
-max-width: 1200px;
-margin: 0 auto;
-}
-
-
-
-
-h2 {
-color:rgb(156, 112, 58);
-text-align: center;
-font-size: 2rem;
-margin-bottom: 30px;
-position: relative;
-}
-
-
-
-
-h2::after {
-content: '';
-width: 60px;
-height: 4px;
-background: var(--accent);
-display: block;
-margin: 10px auto 0;
-border-radius: 2px;
-}
-
-
-
-
-.services {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 25px;
-margin-top: 30px;
-}
-
-
-
-
-.card {
-background: var(--white);
-padding: 25px;
-border-radius: 12px;
-box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-transition: transform 0.3s ease;
-}
-
-
-
-
-.card:hover {
-transform: translateY(-5px);
-}
-
-
-
-
-.card h3 {
-color: rgb(180, 120, 42);
-margin-bottom: 10px;
-}
-
-
-
-
-.card p {
-color: rgb(19, 19, 99);
-}
-footer a {
-color: rgb(7, 7, 73);
-text-decoration: none;
-font-weight: 500;
-}
-
-
-
-
-footer a:hover {
-text-decoration: underline;
-}
-
-
-
-
-.contacto {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-gap: 30px;
-align-items: start;
-}
-
-
-
-
-form input, form textarea {
-width: 100%;
-padding: 12px;
-border-radius: 8px;
-border: 1px solid #af9029;
-margin-bottom: 15px;
-font-family: inherit;
-}
-
-
-
-
-form button {
-background: var(--primary);
-color: rgb(13, 13, 78);
-border: none;
-padding: 10px 20px;
-border-radius: 8px;
-cursor: pointer;
-transition: background 0.3s ease;
-}
-
-
-
-
-form button:hover {
-background: var(--accent);
-color: rgb(12, 12, 61);
-}
-</style>
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--crema);
+      color: var(--azul-marino);
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      width: 100%;
+      background-color: var(--azul-marino);
+      color: var(--blanco);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: var(--blanco);
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--dorado);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae') center/cover no-repeat;
+      color: var(--blanco);
+      text-align: center;
+      padding: 10rem 2rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background-color: var(--dorado);
+      color: var(--azul-marino);
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #c09b2d;
+    }
+
+    /* ===== COSTES ===== */
+    .costes {
+      background-color: var(--blanco);
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .costes h3 {
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      font-weight: 600;
+    }
+
+    .costes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .coste-card {
+      background-color: var(--crema);
+      border: 1px solid #e3d9b0;
+      padding: 2rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .coste-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .coste-card img {
+      width: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .coste-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .coste-card p {
+      font-size: 0.95rem;
+    }
+
+    /* ===== MATERIALES ===== */
+    .materiales {
+      background-color: var(--gris);
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .materiales h3 {
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      font-weight: 600;
+    }
+
+    .materiales-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .material {
+      background-color: var(--blanco);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .material:hover {
+      transform: translateY(-5px);
+    }
+
+    .material img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .material h4 {
+      font-size: 1.2rem;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .material p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: var(--azul-marino);
+      color: var(--blanco);
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    footer h4 {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    footer form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    footer input, footer select {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 6px;
+    }
+
+    footer button {
+      background-color: var(--dorado);
+      color: var(--azul-marino);
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    footer button:hover {
+      background-color: #c09b2d;
+    }
+
+    footer p {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<div class="nav">
-<div class="logo">Supervisión de Obra</div>
-<nav>
-<ul>
-<li> <a href="https://24140392-sys.github.io/DreamSpace.Constr./">Inicio</a></li>
-<li><a href="https://24140392-sys.github.io/DreamSpace.Remodelation/">Remodelaciones</a> </li>
-<li><a href="https://24140392-sys.github.io/DreamSpace.Design/">Diseños</a></li>
-<li><a href="https://24140392-sys.github.io/DreamSpace.Costs/">Costos</a></li>
+  <header>
+    <h1>DreamSpace</h1>
+    <nav>
+      <a href="https://24140392-sys.github.io/DreamSpace.Constr./">Inicio</a>
+<a href="https://24140392-sys.github.io/DreamSpace.Remodelation/">Remodelaciones</a> 
+<a href="https://24140392-sys.github.io/DreamSpace.Observation/">Supervición</a> 
+<a href="https://24140392-sys.github.io/DreamSpace.Design/">Diseños</a>
+    </nav>
+  </header>
 
-</ul>
-</nav>
-</div>
-</header>
+  <section class="hero" id="inicio">
+    <h2>Calcula y planifica tu proyecto de construcción</h2>
+    <p>Compara costes, elige materiales y obtén una estimación real del valor de tu vivienda.</p>
+    <a href="#contacto" class="btn">Obtener presupuesto</a>
+    <a href="#costes" class="btn">Ver tarifas</a>
+  </section>
 
+  <section class="costes" id="costes">
+    <h3>Costes aproximados de construcción</h3>
+    <div class="costes-grid">
+      <div class="coste-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4770/4770349.png" alt="Vivienda básica">
+        <h4>Vivienda Básica</h4>
+        <p>Desde $899/m²<br>Materiales sencillos y prácticas funcionales, ideal para presupuestos ajustados.</p>
+      </div>
+      <div class="coste-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/5220/5220037.png" alt="Vivienda media">
+        <h4>Vivienda Media</h4>
+        <p>Desde $999/m²<br>Combinación de calidad y confort, excelente valor con acabados duraderos.</p>
+      </div>
+      <div class="coste-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2953/2953423.png" alt="Vivienda premium">
+        <h4>Vivienda Premium</h4>
+        <p>Desde $1,099/m²<br>Materiales de alta gama y diseño arquitectónico exclusivo.</p>
+      </div>
+    </div>
+  </section>
 
+  <section class="materiales" id="materiales">
+    <h3>Materiales destacados</h3>
+    <div class="materiales-grid">
+      <div class="material">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Hormigón armado">
+        <h4>Hormigón armado</h4>
+        <p>Durabilidad, resistencia y versatilidad para estructuras principales.</p>
+      </div>
+      <div class="material">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="Madera tratada">
+        <h4>Madera tratada</h4>
+        <p>Perfecta para techos, terrazas y acabados interiores decorativos.</p>
+      </div>
+      <div class="material">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV1M9OgSnQyr9Om3VBAHehUYSjHydz7WJkYg&s" alt="Ladrillo cerámico">
+        <h4>Ladrillo cerámico</h4>
+        <p>Excelente aislamiento térmico y durabilidad en muros exteriores.</p>
+      </div>
+    </div>
+  </section>
 
-
-<section id="inicio">
-<div class="hero-container">
-<h1>Supervisión Profesional de Obra</h1>
-<p>Garantizamos calidad, seguridad y cumplimiento en cada etapa de tu proyecto.</p>
-<button class="btn">Solicitar Asesoría</button>
-</div>
-</section>
-
-
-
-
-<section id="servicios">
-<h2>Nuestros Servicios</h2>
-<div class="services">
-<div class="card">
-<h3>Supervisión Técnica</h3>
-<p>Verificación de ejecución conforme a planos, especificaciones y normas de calidad.</p>
-</div>
-<div class="card">
-<h3>Control de Calidad</h3>
-<p>Evaluación y control de materiales, procedimientos y entregables de construcción.</p>
-</div>
-<div class="card">
-<h3>Seguridad en Obra</h3>
-<p>Implementación de protocolos de seguridad y supervisión de cumplimiento normativo.</p>
-</div>
-</div>
-</section>
-
-
-
-
-<section id="contacto">
-<h2>Contáctanos</h2>
-<div class="contacto">
-<form>
-<input type="text" placeholder="Nombre" required />
-<input type="email" placeholder="Correo electrónico" required />
-<textarea rows="5" placeholder="Mensaje" required></textarea>
-<button type="submit">Enviar</button>
-</form>
-<div>
-<h3>Información de contacto</h3>
-<p><strong>Teléfono:</strong> +52 55 1234 5678</p>
-<p><strong>Email:</strong> contacto@supervision-obra.mx</p>
-<p><strong>Ubicación:</strong> Ciudad de México</p>
-</div>
-</div>
-</section>
-
-
-
-
-<footer>
-<p> 2025 Supervisión de Obra — Todos los derechos reservados</p>
-<p><a href="#inicio">Volver arriba</a></p>
-</footer>
+  <footer id="contacto">
+    <h4>Solicita tu presupuesto personalizado</h4>
+    <form>
+      <input type="text" placeholder="Nombre completo" required>
+      <select required>
+        <option value="">Tipo de vivienda</option>
+        <option>Vivienda básica</option>
+        <option>Vivienda media</option>
+        <option>Vivienda premium</option>
+      </select>
+      <input type="email" placeholder="Correo electrónico" required>
+      <button type="submit">Enviar solicitud</button>
+    </form>
+    <p>© 2025 DreamSpace - Todos los derechos reservados</p>
+  </footer>
 </body>
 </html>
